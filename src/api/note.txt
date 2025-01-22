@@ -1,0 +1,14 @@
+export const fetchPosts = async (page) => {
+  try {
+    const response = await axios.get('http://localhost:3000/posts', {
+      params: {
+        _sort: '-id',
+        ...(page && { _page: page, _per_page: 5 }),
+      },
+    });
+
+    return response.data; // Axios automatically parses the JSON response
+  } catch (error) {
+    throw new Error(`Failed to fetch posts. Status: ${error.response?.status || error.message}`);
+  }
+};

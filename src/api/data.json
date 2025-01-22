@@ -1,103 +1,130 @@
-[
+{
+  "posts": [
     {
       "title": "Task 1",
       "description": "Complete the project documentation. Ensure that all sections are properly detailed, including the introduction, technical specifications, and user guidelines. Highlight any challenges faced during development and provide solutions implemented to address them.",
-      "date": "2025-01-24 to 2025-01-25"
+      "date": "2025-01-24 to 2025-01-25",
+      "id": "6deb"
     },
     {
       "title": "Task 2",
       "description": "Fix bugs in the authentication module. Investigate user feedback regarding login issues and resolve inconsistencies in session management. Perform rigorous testing to ensure that all edge cases are handled effectively before deployment.",
-      "date": "2025-01-26 to 2025-01-27"
+      "date": "2025-01-26 to 2025-01-27",
+      "id": "6800"
     },
     {
       "title": "Task 3",
       "description": "Prepare slides for the team meeting. Include a detailed summary of the project's progress, upcoming milestones, and potential risks. Use charts and graphs to present data effectively and provide actionable insights for team members.",
-      "date": "2025-01-28 to 2025-01-29"
+      "date": "2025-01-28 to 2025-01-29",
+      "id": "8acd"
     },
     {
       "title": "Task 4",
       "description": "Review and refactor the codebase. Focus on improving readability and optimizing performance. Remove redundant code and ensure adherence to the project's coding standards. Document changes for future reference and maintain version control.",
-      "date": "2025-01-30 to 2025-01-31"
+      "date": "2025-01-30 to 2025-01-31",
+      "id": "a095"
     },
     {
       "title": "Task 5",
       "description": "Update dependencies in the project. Check for the latest stable versions of all libraries and frameworks used. Conduct tests to ensure compatibility and address any breaking changes that may arise during the upgrade process.",
-      "date": "2025-02-01 to 2025-02-02"
+      "date": "2025-02-01 to 2025-02-02",
+      "id": "4390"
     },
     {
       "title": "Task 6",
       "description": "Design a new landing page for the website. Ensure that the layout is user-friendly, visually appealing, and optimized for mobile devices. Incorporate client feedback into the final design.",
-      "date": "2025-02-03 to 2025-02-04"
+      "date": "2025-02-03 to 2025-02-04",
+      "id": "1a0c"
     },
     {
       "title": "Task 7",
       "description": "Conduct a security audit. Identify potential vulnerabilities in the system and implement measures to strengthen security protocols. Prepare a detailed report on findings and improvements made.",
-      "date": "2025-02-05 to 2025-02-06"
+      "date": "2025-02-05 to 2025-02-06",
+      "id": "85db"
     },
     {
       "title": "Task 8",
       "description": "Organize a knowledge-sharing session. Prepare content on recent advancements in the field and share best practices with the team. Encourage interactive discussions to foster a collaborative learning environment.",
-      "date": "2025-02-07 to 2025-02-08"
+      "date": "2025-02-07 to 2025-02-08",
+      "id": "4669"
     },
     {
       "title": "Task 9",
       "description": "Test the new payment gateway integration. Verify that all transactions are processed securely and without errors. Ensure compliance with relevant financial regulations and standards.",
-      "date": "2025-02-09 to 2025-02-10"
+      "date": "2025-02-09 to 2025-02-10",
+      "id": "d3cf"
     },
     {
       "title": "Task 10",
       "description": "Create a user guide for the software application. Include step-by-step instructions, troubleshooting tips, and an FAQ section. Use simple language and visuals to make the guide accessible to all users.",
-      "date": "2025-02-11 to 2025-02-12"
+      "date": "2025-02-11 to 2025-02-12",
+      "id": "e30a"
     },
     {
       "title": "Task 11",
       "description": "Develop automated tests for critical features. Write scripts that cover various scenarios and ensure that they are integrated into the CI/CD pipeline. Regularly update tests to reflect new functionality.",
-      "date": "2025-02-13 to 2025-02-14"
+      "date": "2025-02-13 to 2025-02-14",
+      "id": "a5bd"
     },
     {
       "title": "Task 12",
       "description": "Host a brainstorming session to generate ideas for the upcoming project. Document all suggestions and identify actionable concepts that align with the project's objectives.",
-      "date": "2025-02-15 to 2025-02-16"
+      "date": "2025-02-15 to 2025-02-16",
+      "id": "f6f5"
     },
     {
       "title": "Task 13",
       "description": "Analyze website analytics data. Identify trends in user behavior and recommend strategies to enhance engagement. Prepare a presentation to share findings with the team.",
-      "date": "2025-02-17 to 2025-02-18"
+      "date": "2025-02-17 to 2025-02-18",
+      "id": "2e36"
     },
     {
       "title": "Task 14",
       "description": "Redesign the database schema to improve efficiency. Normalize tables, optimize queries, and ensure that the structure supports future scalability needs. Test the new schema extensively before deploying.",
-      "date": "2025-02-19 to 2025-02-20"
+      "date": "2025-02-19 to 2025-02-20",
+      "id": "fd10"
     },
     {
       "title": "Task 15",
       "description": "Update the company's branding materials. Revise the logo, color scheme, and typography to reflect the updated brand identity. Coordinate with the marketing team to roll out changes across all platforms.",
-      "date": "2025-02-21 to 2025-02-22"
+      "date": "2025-02-21 to 2025-02-22",
+      "id": "76a7"
     },
     {
       "title": "Task 16",
       "description": "Optimize the website for search engines. Conduct keyword research, update meta tags, and ensure that all content aligns with SEO best practices. Monitor rankings to evaluate the impact of changes.",
-      "date": "2025-02-23 to 2025-02-24"
+      "date": "2025-02-23 to 2025-02-24",
+      "id": "f63c"
     },
     {
       "title": "Task 17",
       "description": "Migrate data from the legacy system to the new platform. Develop a plan to ensure a smooth transition, including data validation and backup strategies. Minimize downtime during the migration process.",
-      "date": "2025-02-25 to 2025-02-26"
+      "date": "2025-02-25 to 2025-02-26",
+      "id": "d809"
     },
     {
       "title": "Task 18",
       "description": "Conduct user interviews to gather feedback on the prototype. Prepare a set of questions to evaluate user satisfaction and identify areas for improvement. Summarize key insights in a report.",
-      "date": "2025-02-27 to 2025-02-28"
+      "date": "2025-02-27 to 2025-02-28",
+      "id": "74d9"
     },
     {
       "title": "Task 19",
       "description": "Develop a chatbot feature for the application. Use natural language processing to enable seamless interactions. Train the bot to handle common user queries and provide helpful responses.",
-      "date": "2025-03-01 to 2025-03-02"
+      "date": "2025-03-01 to 2025-03-02",
+      "id": "760f"
     },
     {
       "title": "Task 20",
       "description": "Prepare a quarterly report for stakeholders. Include financial updates, project highlights, and future plans. Use graphs and charts to present data clearly and concisely.",
-      "date": "2025-03-03 to 2025-03-04"
+      "date": "2025-03-03 to 2025-03-04",
+      "id": "2b50"
+    },
+    {
+      "id": 21,
+      "title": "new added",
+      "description": "one tho this ",
+      "date": "2025-01-22 to 2025-01-24"
     }
   ]
-  
+}
