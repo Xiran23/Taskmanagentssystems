@@ -7,6 +7,7 @@ import { useMutation } from '@tanstack/react-query';
 import { useQueryClient } from '@tanstack/react-query';
 import {fetchTask} from '../api/api';
 import { useQuery,  } from '@tanstack/react-query'
+import { ToastContainer, toast } from 'react-toastify';
 
 
 
@@ -19,6 +20,7 @@ interface Task{
 
 
 export const TaskForm: React.FC = () => {
+    const notify = () => toast("Task created");
 
 
   const {data:postData,} = useQuery<Task[]>({ //use of arrya ty
@@ -80,13 +82,51 @@ export const TaskForm: React.FC = () => {
 
     const handleSubmit = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>)=>{
         e.preventDefault()  
+        let isvalid = true
+    
+        if(formData.title === ''){
+          isvalid = false
+        }
+    
+        if(formData.description === ''){
+          isvalid = false
+        }
+    
+        if(formData.date === ''){
+          isvalid = false
+        }
     // console.log(formData)
     const title  = formData.title;
     const description = formData.description
     const date = formData.date
 
-    mutate({id: postData?.length+1 , title,description,date});
-    e.target.reset();
+
+     if(isvalid){
+      console.log(isvalid)
+
+       mutate({id: postData?.length+1 , title,description,date});
+       notify()
+      //  e.target.reset();
+      setData({
+
+        title:'',
+        description:'',
+        date:''
+      })
+     }else {
+
+      toast.warn('Fill all details', {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: false,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+        
+        });
+     }
    
     
 
@@ -97,7 +137,7 @@ export const TaskForm: React.FC = () => {
 
   return (
     <div> 
-
+<ToastContainer />
 
 <form className="max-w-sm mx-auto flex flex-col align-center gap-y-1 " onSubmit={handleSubmit} >
 
@@ -109,7 +149,7 @@ export const TaskForm: React.FC = () => {
                     value={formData.title}
                     type="text"
                     id="title" 
-                    className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400  dark:focus:ring-blue-500 dark:focus:border-blue-500"/>
+                    className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400  dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:text-white"/>
 
 
                     <label htmlFor="task-description" className="block mb-2 text-sm font-medium text-gray-900 dark:">Descriptions</label>
@@ -118,7 +158,7 @@ export const TaskForm: React.FC = () => {
                     value={formData.description}
                     onChange={handleChange}
 
-                    className=" h-64 block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark: dark:focus:ring-blue-500 dark:focus:border-blue-500 mb-2" placeholder="..."></textarea>
+                    className=" dark:text-white h-64 block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark: dark:focus:ring-blue-500 dark:focus:border-blue-500 mb-2" placeholder="..."></textarea>
 
 
                     {/* date */}

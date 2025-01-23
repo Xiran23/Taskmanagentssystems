@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-// import { TaskCard } from '../components/TaskCard';
-import { fetchTask } from '../api/api';
-import { useQuery } from '@tanstack/react-query';
-import { useNavigate } from 'react-router-dom';
+import React, { useState, useEffect } from "react";
+import { fetchTask } from "../api/api";
+import { useQuery } from "@tanstack/react-query";
+import { useNavigate } from "react-router-dom";
+import { useDebounce } from "use-debounce";
 
 export const Search: React.FC = () => {
   interface Task {
@@ -13,26 +13,20 @@ export const Search: React.FC = () => {
   }
 
   const navigate = useNavigate();
-
-  // Fetch tasks using React Query
-  const { data: tasks = [] } = useQuery<Task[]>({
-    queryKey : ["posts"],
-    queryFn:()=>fetchTask()
+  const { data: tasks = [], isError } = useQuery<Task[]>({
+    queryKey: ["posts"],
+    queryFn: () => fetchTask(),
   });
- 
 
-  const [query, setQuery] = useState('');
+  const [query, setQuery] = useState("");
+  const [debouncedQuery] = useDebounce(query, 300);
   const [filteredItems, setFilteredItems] = useState<Task[]>([]);
   const [showDropdown, setShowDropdown] = useState(false);
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const value = e.target.value;
-    setQuery(value);
-
-    // Filter tasks based on title
-    if (value) {
+  useEffect(() => {
+    if (debouncedQuery) {
       const matches = tasks.filter((task) =>
-        task.title.toLowerCase().includes(value.toLowerCase())
+        task.title.toLowerCase().includes(debouncedQuery.toLowerCase())
       );
       setFilteredItems(matches);
       setShowDropdown(true);
@@ -40,14 +34,21 @@ export const Search: React.FC = () => {
       setFilteredItems([]);
       setShowDropdown(false);
     }
+  }, [debouncedQuery, tasks]);
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setQuery(e.target.value);
   };
 
   const handleSelect = (task: Task) => {
     setQuery(task.title);
     setShowDropdown(false);
-    // Navigate to the task details page
-    navigate(`/tasklist/tasks/${task.id}`);
+    navigate(`/tasks/${task.id}`);
   };
+
+  if (isError) {
+    return <div>Error loading tasks. Please try again later.</div>;
+  }
 
   return (
     <div>
@@ -55,18 +56,17 @@ export const Search: React.FC = () => {
         <label htmlFor="task-search" className="sr-only">
           Search
         </label>
-        <div className="relative w-full">
+        <div className="relative w-full dropdown-container">
           <input
             type="text"
             id="task-search"
             className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
             placeholder="Search task title..."
-            autocomplete="off"
             value={query}
             onChange={handleInputChange}
           />
           {showDropdown && (
-            <div className="absolute top-full left-0 w-full bg-white border border-gray-300 rounded-lg shadow-md dark:bg-gray-700 dark:border-gray-600">
+            <div className="absolute top-full left-0 w-full bg-white border border-gray-300 rounded-lg shadow-md dark:bg-gray-700 dark:border-gray-600 z-10">
               {filteredItems.length > 0 ? (
                 filteredItems.map((task) => (
                   <div
@@ -85,7 +85,6 @@ export const Search: React.FC = () => {
             </div>
           )}
         </div>
-     
       </form>
     </div>
   );

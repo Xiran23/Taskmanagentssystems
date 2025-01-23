@@ -13,18 +13,6 @@
       "id": "6800"
     },
     {
-      "title": "Task 3",
-      "description": "Prepare slides for the team meeting. Include a detailed summary of the project's progress, upcoming milestones, and potential risks. Use charts and graphs to present data effectively and provide actionable insights for team members.",
-      "date": "2025-01-28 to 2025-01-29",
-      "id": "8acd"
-    },
-    {
-      "title": "Task 4",
-      "description": "Review and refactor the codebase. Focus on improving readability and optimizing performance. Remove redundant code and ensure adherence to the project's coding standards. Document changes for future reference and maintain version control.",
-      "date": "2025-01-30 to 2025-01-31",
-      "id": "a095"
-    },
-    {
       "title": "Task 5",
       "description": "Update dependencies in the project. Check for the latest stable versions of all libraries and frameworks used. Conduct tests to ensure compatibility and address any breaking changes that may arise during the upgrade process.",
       "date": "2025-02-01 to 2025-02-02",
@@ -55,52 +43,16 @@
       "id": "d3cf"
     },
     {
-      "title": "Task 10",
-      "description": "Create a user guide for the software application. Include step-by-step instructions, troubleshooting tips, and an FAQ section. Use simple language and visuals to make the guide accessible to all users.",
-      "date": "2025-02-11 to 2025-02-12",
-      "id": "e30a"
-    },
-    {
       "title": "Task 11",
       "description": "Develop automated tests for critical features. Write scripts that cover various scenarios and ensure that they are integrated into the CI/CD pipeline. Regularly update tests to reflect new functionality.",
       "date": "2025-02-13 to 2025-02-14",
       "id": "a5bd"
     },
     {
-      "title": "Task 12",
-      "description": "Host a brainstorming session to generate ideas for the upcoming project. Document all suggestions and identify actionable concepts that align with the project's objectives.",
-      "date": "2025-02-15 to 2025-02-16",
-      "id": "f6f5"
-    },
-    {
-      "title": "Task 13",
-      "description": "Analyze website analytics data. Identify trends in user behavior and recommend strategies to enhance engagement. Prepare a presentation to share findings with the team.",
-      "date": "2025-02-17 to 2025-02-18",
-      "id": "2e36"
-    },
-    {
-      "title": "Task 14",
-      "description": "Redesign the database schema to improve efficiency. Normalize tables, optimize queries, and ensure that the structure supports future scalability needs. Test the new schema extensively before deploying.",
-      "date": "2025-02-19 to 2025-02-20",
-      "id": "fd10"
-    },
-    {
       "title": "Task 15",
       "description": "Update the company's branding materials. Revise the logo, color scheme, and typography to reflect the updated brand identity. Coordinate with the marketing team to roll out changes across all platforms.",
       "date": "2025-02-21 to 2025-02-22",
       "id": "76a7"
-    },
-    {
-      "title": "Task 16",
-      "description": "Optimize the website for search engines. Conduct keyword research, update meta tags, and ensure that all content aligns with SEO best practices. Monitor rankings to evaluate the impact of changes.",
-      "date": "2025-02-23 to 2025-02-24",
-      "id": "f63c"
-    },
-    {
-      "title": "Task 17",
-      "description": "Migrate data from the legacy system to the new platform. Develop a plan to ensure a smooth transition, including data validation and backup strategies. Minimize downtime during the migration process.",
-      "date": "2025-02-25 to 2025-02-26",
-      "id": "d809"
     },
     {
       "title": "Task 18",
@@ -121,10 +73,28 @@
       "id": "2b50"
     },
     {
-      "id": 21,
-      "title": "new added",
-      "description": "one tho this ",
-      "date": "2025-01-22 to 2025-01-24"
+      "id": "29",
+      "title": "This one is more fam",
+      "description": "Instagram[a] is an American photo and video sharing social networking service owned by Meta Platforms. It allows users to upload media that can be edited with filters, be organized by hashtags, and be associated with a location via geographical tagging. Posts can be shared publicly or with preapproved followers. Users can browse other users' content by tags and locations, view trending content, like photos, and follow other users to add their content to a personal feed.[8] A Meta-operated image-centric social media platform, it is available on iOS, Android, Windows 10, and the web. Users can take phot",
+      "date": ""
+    },
+    {
+      "id": "30",
+      "title": "This one is more fam",
+      "description": "Instagram[a] is an American photo and video sharing social networking service owned by Meta Platforms. It allows users to upload media that can be edited with filters, be organized by hashtags, and be associated with a location via geographical tagging. Posts can be shared publicly or with preapproved followers. Users can browse other users' content by tags and locations, view trending content, like photos, and follow other users to add their content to a personal feed.[8] A Meta-operated image-centric social media platform, it is available on iOS, Android, Windows 10, and the web. Users can take phot",
+      "date": "2025-01-23 to 2025-01-25"
+    },
+    {
+      "id": "31",
+      "title": "This one is more fam",
+      "description": "Instagram[a] is an American photo and video sharing social networking service owned by Meta Platforms. It allows users to upload media that can be edited with filters, be organized by hashtags, and be associated with a location via geographical tagging. Posts can be shared publicly or with preapproved followers. Users can browse other users' content by tags and locations, view trending content, like photos, and follow other users to add their content to a personal feed.[8] A Meta-operated image-centric social media platform, it is available on iOS, Android, Windows 10, and the web. Users can take phot",
+      "date": "2025-01-23 to 2025-01-25"
+    },
+    {
+      "id": "32",
+      "title": "",
+      "description": "Instagram[a] is an American photo and video sharing social networking service owned by Meta Platforms. It allows users to upload media that can be edited with filters, be organized by hashtags, and be associated with a location via geographical tagging. Posts can be shared publicly or with preapproved followers. Users can browse other users' content by tags and locations, view trending content, like photos, and follow other users to add their content to a personal feed.[8] A Meta-operated image-centric social media platform, it is available on iOS, Android, Windows 10, and the web. Users can take phot",
+      "date": ""
     }
   ]
 }
