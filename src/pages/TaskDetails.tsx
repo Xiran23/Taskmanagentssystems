@@ -6,21 +6,21 @@ import { useMutation, useQuery } from "@tanstack/react-query"
 import { MdDelete } from "react-icons/md";
 import { FaRegEdit } from "react-icons/fa";
 import { useQueryClient } from '@tanstack/react-query';
-import {  toast } from 'react-toastify';
+// import {  toast } from 'react-toastify';
 
 export const TaskDetails:React.FC = () => {
 
-  const notify = () =>  toast('🦄 Wow so easy!', {
-    position: "top-right",
-    autoClose: 5000,
-    hideProgressBar: false,
-    closeOnClick: false,
-    pauseOnHover: true,
-    draggable: true,
-    progress: undefined,
-    theme: "light",
+  // const notify = () =>  toast('🦄 Wow so easy!', {
+  //   position: "top-right",
+  //   autoClose: 5000,
+  //   hideProgressBar: false,
+  //   closeOnClick: false,
+  //   pauseOnHover: true,
+  //   draggable: true,
+  //   progress: undefined,
+  //   theme: "light",
     
-    });
+  //   });
 
 const {id}= useParams<{id:string}>();
 const queryClient = useQueryClient()
@@ -31,6 +31,8 @@ const queryClient = useQueryClient()
     queryFn:()=>fetchByid(id!),
     enabled: !!id
   })
+
+  console.log(`1`,postDataDetails)
 
   const {mutate} = useMutation({
     mutationFn:deleteByid,
@@ -68,6 +70,7 @@ const queryClient = useQueryClient()
   return (
     <div>
       <h1>Task Details {id}</h1>
+      
       {postDataDetails && (
         <div>
           <h2>{postDataDetails?.title}</h2>
