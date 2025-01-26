@@ -10,7 +10,7 @@ export const TaskList: React.FC = () => {
 
 
   interface Task {
-    id: number
+    id: string
     title: string,
     description: string,
     date: string
