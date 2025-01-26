@@ -22,6 +22,9 @@ module.exports = {
 
     require('flowbite/plugin')
   ],
+  safelist: [
+    'backdrop-blur', // Ensures it's included if removed during tree-shaking
+  ]
 
 }
 }

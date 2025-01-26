@@ -16,10 +16,10 @@ export const Search: React.FC = () => {
 
   // Fetch tasks using React Query
   const { data: tasks = [] } = useQuery<Task[]>({
-    queryKey : ["posts"],
-    queryFn:()=>fetchTask()
+    queryKey: ["posts"],
+    queryFn: () => fetchTask()
   });
- 
+
 
   const [query, setQuery] = useState('');
   const [filteredItems, setFilteredItems] = useState<Task[]>([]);
@@ -61,7 +61,7 @@ export const Search: React.FC = () => {
             id="task-search"
             className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
             placeholder="Search task title..."
-            autocomplete="off"
+            autoComplete="off"
             value={query}
             onChange={handleInputChange}
           />
@@ -85,7 +85,7 @@ export const Search: React.FC = () => {
             </div>
           )}
         </div>
-     
+
       </form>
     </div>
   );
