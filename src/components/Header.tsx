@@ -12,7 +12,9 @@ export const Header = () => {
     <header>
 
 
-      <nav className="bg-purple3 border-gray-200 rounded-lg dark:bg-gray-900 drop-shadow-2xl">
+      {/* <nav className=" bg-purple3 border-gray-200 rounded-lg dark:bg-gray-900 drop-shadow-2xl z-50 top-0   fixed inset-x-0"> */}
+      <nav className="w-full bg-purple3 border-gray-200 rounded-lg dark:bg-gray-900 drop-shadow-2xl z-50 top-0 fixed">
+
 
 
 

@@ -30,20 +30,18 @@ export const TaskList: React.FC = () => {
 
   return (
     <main className=''>
-
-
       <div className='flex flex-wrap justify-center gap-4 mt-10'>
-
-
-
         {postData?.map((task, index) => (
           <TaskCard key={index} task={task} />
         ))}
-
-
-
       </div>
     </main>
+
+
+
+
+
+
 
   )
 }
